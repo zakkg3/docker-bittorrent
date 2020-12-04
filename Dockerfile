@@ -1,6 +1,6 @@
 # Debian is preferred because of better support for building packages.
 FROM debian:jessie
-LABEL maintainer="Jesse Bryan <jesse@winneon.moe>"
+LABEL maintainer="Nicolas Kowenski - forked from @winneon"
 
 # Set archive URLs & GitHub mirrors. SourceForge proves constantly that it is unreliable.
 ENV NODEJS_URL https://deb.nodesource.com/setup_8.x

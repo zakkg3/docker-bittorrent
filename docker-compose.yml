@@ -1,12 +1,12 @@
 version: '3'
 services:
   bittorrent:
-    image: winneon/docker-bittorrent
-    build: .
+    image: zakkg3/bittorrent
+  # uncomment for build  build: .
     restart: always
     ports:
-      - MAIN:80 # Main access.
-      - PEER:5000 # Incoming peer traffic.
-      - DHT:6881 # Incoming/outgoing DHT traffic.
+      - 8080:80 # Main access.
+      - 5050:5000 # Incoming peer traffic.
+      - 6060:6881 # Incoming/outgoing DHT traffic.
     volumes:
-      - CONTENT:/data/rtorrent # Content directory.
+      - /home/nico/torrent/data:/data/rtorrent # Content directory.
